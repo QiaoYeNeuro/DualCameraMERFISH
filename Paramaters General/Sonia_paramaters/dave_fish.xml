@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<recipe>
+
+<command_sequence>
+
+    
+    <wakeup>20000</wakeup>
+   <change_directory>C:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+        
+       
+
+    <delay>2000</delay>
+      <copy_directory>
+        <source_path>C:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set1</source_path>
+        <target_path>W:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set2</change_directory> 
+      <loop name = "Position Loop Zscan2" increment = "name"><item name = "Conv2"></item></loop>
+        
+       
+
+    <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set2</source_path>
+        <target_path>W:\DCBB_human_01_11_2023\H1_BCL,gn2,gn3,LaminA,DAPI_set2</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+</command_sequence>
+
+
+
+
+<item name = "Conv1">
+  <movie>
+    <name increment = "Yes">Conv_zscan_</name>
+            <overwrite>True</overwrite>
+    <length>250</length>
+    <parameters>5col_abs_40X</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan1"></variable_entry>
+  </movie>
+</item>
+
+
+
+
+<item name = "Conv2">
+  <movie>
+    <name increment = "Yes">Conv_zscan_</name>
+            <overwrite>True</overwrite>
+    <length>250</length>
+    <parameters>5col_abs_40X</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan2"></variable_entry>
+  </movie>
+</item>
+
+
+
+
+    <loop_variable name = "Position Loop Zscan1">
+   <file_path></file_path>
+</loop_variable>
+    <loop_variable name = "Position Loop Zscan2">
+   <file_path></file_path>
+</loop_variable></recipe>

@@ -1,0 +1,1 @@
+cmd /K ""C:\Users\Capricorn\anaconda3\Scripts\activate.bat" "capricorn" &  "python" "C:\Software\Capricorn\storm_control\hal4000\hal4000.py" "C:\Software\Capricorn\MEGAFISH-configs\megafish_hcam_celesta_tiger_config_kinetix.xml""

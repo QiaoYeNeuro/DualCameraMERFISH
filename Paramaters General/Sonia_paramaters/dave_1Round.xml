@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<recipe>
+
+<command_sequence>
+<valve_protocol>Hybridize 11</valve_protocol>
+    
+    <wakeup>20000</wakeup>
+   <change_directory>D:\DCBB_Human1F_12_20_2022\H1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+        
+       
+
+    <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\DCBB_Human1F_12_20_2022\H1</source_path>
+        <target_path>W:\DCBB_human__11_18_2022\H1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+      <valve_protocol>StripFormamide</valve_protocol>
+      
+      <valve_protocol>Flow Image Buffer</valve_protocol>
+      <change_directory>D:\DCBB_Human1F_12_20_2022\H0</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+        
+       
+
+    <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\DCBB_Human1F_12_20_2022\H0</source_path>
+        <target_path>W:\DCBB_human__11_18_2022\H0</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+</command_sequence>
+
+<item name = "Conv1">
+  <movie>
+    <name increment = "Yes">Conv_zscan_</name>
+            <overwrite>True</overwrite>
+    <length>160</length>
+    <parameters>MERFISH_4col</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan1"></variable_entry>
+  </movie>
+
+</item>
+
+
+    <loop_variable name = "Position Loop Zscan1">
+   <file_path></file_path>
+</loop_variable>
+   
+   </recipe>

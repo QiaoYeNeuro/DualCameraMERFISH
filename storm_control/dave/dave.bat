@@ -1,0 +1,1 @@
+cmd /K ""C:\Users\Capricorn\anaconda3\Scripts\activate.bat" "capricorn" &  "python" "C:\Software\Capricorn\storm_control\dave\dave.py"

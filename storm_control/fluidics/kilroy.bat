@@ -1,0 +1,1 @@
+cmd /K ""C:\Users\Capricorn\anaconda3\Scripts\activate.bat" "capricorn" &  "python" "C:\Software\Capricorn\storm_control\fluidics\kilroy.py" "C:\Software\Capricorn\storm_control\fluidics\kilroy_settings_default.xml""
