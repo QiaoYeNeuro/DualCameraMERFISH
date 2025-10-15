@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<recipe>
+
+<command_sequence>
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set1</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set2</change_directory> 
+      <loop name = "Position Loop Zscan2" increment = "name"><item name = "Conv2"></item></loop>
+                  <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set2</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set2</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+       
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set3</change_directory> 
+      <loop name = "Position Loop Zscan3" increment = "name"><item name = "Conv3"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set3</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set3</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+      
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set4</change_directory> 
+      <loop name = "Position Loop Zscan4" increment = "name"><item name = "Conv4"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set4</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set4</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+
+       
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set5</change_directory> 
+      <loop name = "Position Loop Zscan5" increment = "name"><item name = "Conv5"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set5</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H0_MT-ND3_OLIG1_AQP4_set5</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+      
+      
+
+
+
+	<valve_protocol>StripFormamide</valve_protocol> 
+    <valve_protocol>Hybridize 1</valve_protocol>    
+  <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set1</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set2</change_directory> 
+      <loop name = "Position Loop Zscan2" increment = "name"><item name = "Conv2"></item></loop>
+                  <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set2</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set2</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+       
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set3</change_directory> 
+      <loop name = "Position Loop Zscan3" increment = "name"><item name = "Conv3"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set3</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set3</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+      
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set4</change_directory> 
+      <loop name = "Position Loop Zscan4" increment = "name"><item name = "Conv4"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set4</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set4</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+
+       
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set5</change_directory> 
+      <loop name = "Position Loop Zscan5" increment = "name"><item name = "Conv5"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set5</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H1_P1F123_set5</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+	   
+	   
+	   
+	   
+	     
+	<valve_protocol>StripFormamide</valve_protocol> 
+    <valve_protocol>Hybridize 2</valve_protocol>    
+      <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set1</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set2</change_directory> 
+      <loop name = "Position Loop Zscan2" increment = "name"><item name = "Conv2"></item></loop>
+                  <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set2</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set2</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+       
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set3</change_directory> 
+      <loop name = "Position Loop Zscan3" increment = "name"><item name = "Conv3"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set3</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set3</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+      
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set4</change_directory> 
+      <loop name = "Position Loop Zscan4" increment = "name"><item name = "Conv4"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set4</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set4</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+
+       
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set5</change_directory> 
+      <loop name = "Position Loop Zscan5" increment = "name"><item name = "Conv5"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set5</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H2_Igfbpl1_Aldh1l1_Ptbp1_set5</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+      
+      
+      
+      
+      
+      
+      
+         
+	<valve_protocol>StripFormamide</valve_protocol> 
+    <valve_protocol>Hybridize 3</valve_protocol>    
+      <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set1</change_directory> 
+      <loop name = "Position Loop Zscan1" increment = "name"><item name = "Conv1"></item></loop>
+          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set1</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set1</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set2</change_directory> 
+      <loop name = "Position Loop Zscan2" increment = "name"><item name = "Conv2"></item></loop>
+                  <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set2</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set2</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+
+       
+
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set3</change_directory> 
+      <loop name = "Position Loop Zscan3" increment = "name"><item name = "Conv3"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set3</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set3</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+      
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>E:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set4</change_directory> 
+      <loop name = "Position Loop Zscan4" increment = "name"><item name = "Conv4"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>E:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set4</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set4</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+       
+
+
+       
+ 
+    <wakeup>20000</wakeup>
+   <change_directory>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set5</change_directory> 
+      <loop name = "Position Loop Zscan5" increment = "name"><item name = "Conv5"></item></loop>
+                          <delay>2000</delay>
+      <copy_directory>
+        <source_path>D:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set5</source_path>
+        <target_path>Z:\Brett_10_04_2024__mouseSample3EcDNA\H3_MT-ND3_OLIG1_AQP4_set5</target_path>
+        <delete_source>True</delete_source>
+      </copy_directory>    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</command_sequence>
+
+<item name = "Conv1">
+  <movie>
+    <name increment = "Yes">Conv_zscan1</name>
+            <overwrite>True</overwrite>
+      <length>160</length><delay>500</delay>
+	 
+    <parameters>Kinetix_20Hz_750_640_560_405_400nm_comp</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan1"></variable_entry>
+  </movie>
+</item>
+
+<item name = "Conv2">
+  <movie>
+    <name increment = "Yes">Conv_zscan2</name>
+            <overwrite>True</overwrite>
+      <length>160</length><delay>500</delay>
+    <parameters>Kinetix_20Hz_750_640_560_405_400nm_comp</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+
+    <variable_entry name = "Position Loop Zscan2"></variable_entry>
+  </movie>
+</item>
+
+<item name = "Conv3">
+  <movie>
+    <name increment = "Yes">Conv_zscan3</name>
+            <overwrite>True</overwrite>
+      <length>160</length><delay>500</delay>
+    <parameters>Kinetix_20Hz_750_640_560_405_400nm_comp</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan3"></variable_entry>
+  </movie>
+</item>
+
+<item name = "Conv4">
+  <movie>
+    <name increment = "Yes">Conv_zscan4</name>
+            <overwrite>True</overwrite>
+      <length>160</length><delay>500</delay>
+    <parameters>Kinetix_20Hz_750_640_560_405_400nm_comp</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan4"></variable_entry>
+  </movie>
+</item>
+
+<item name = "Conv5">
+  <movie>
+    <name increment = "Yes">Conv_zscan5</name>
+            <overwrite>True</overwrite>
+      <length>160</length><delay>500</delay>
+    <parameters>Kinetix_20Hz_750_640_560_405_400nm_comp</parameters>
+<check_focus><num_focus_checks>20</num_focus_checks><focus_scan/></check_focus>
+    <variable_entry name = "Position Loop Zscan5"></variable_entry>
+  </movie>
+</item>
+
+
+
+    <loop_variable name = "Position Loop Zscan1">
+   <file_path>pos_1.txt</file_path>
+</loop_variable>
+    <loop_variable name = "Position Loop Zscan2">
+   <file_path>pos_2.txt</file_path>
+</loop_variable>
+
+    <loop_variable name = "Position Loop Zscan3">
+   <file_path>pos_3.txt</file_path>
+</loop_variable>
+
+    <loop_variable name = "Position Loop Zscan4">
+   <file_path>pos_4.txt</file_path>
+</loop_variable>
+
+    <loop_variable name = "Position Loop Zscan5">
+   <file_path>pos_5.txt</file_path>
+</loop_variable>
+
+
+    </recipe>
