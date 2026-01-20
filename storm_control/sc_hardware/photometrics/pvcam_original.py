@@ -94,8 +94,7 @@ class PVCAMCamera(object):
     """
     def __init__(self, camera_name = None, **kwds):
         super().__init__(**kwds)
-        self.triger_mode = 0 ### 0 means master continous aquisition, 1 means slave bulb sequential aquisition
-        self.exp_len = 10 ### How many frames to run - 1 for circular buffer
+
         self.buffer_len = None
         self.data_buffer = None
         self.frame_bytes = None
@@ -103,7 +102,7 @@ class PVCAMCamera(object):
         self.frame_y = None
         self.n_captured = pvc.uns32(0) # No more than 4 billion frames in a single capture..
         self.n_processed = 0
-        self.camera_name = camera_name
+
         # Open camera.
         c_name = ctypes.c_char_p(camera_name.encode())
         self.hcam = pvc.int16(0)
@@ -139,43 +138,24 @@ class PVCAMCamera(object):
         # Setup acquisition & determine how large a frame is (in pixels).
         frame_size = pvc.uns32(0)
         region = pvc.rgn_type(x_start, x_end, x_bin, y_start, y_end, y_bin)
-        if self.triger_mode==0:
-            print("The camera is in master mode. :)")
-            check(pvcam.pl_exp_setup_cont(self.hcam,
-                                          pvc.uns16(1),
-                                          ctypes.byref(region),
-                                          pvc.int16(pvc.TIMED_MODE),
-                                          pvc.uns32(exposure_time),
-                                          ctypes.byref(frame_size),
-                                          pvc.int16(pvc.CIRC_OVERWRITE)),
-                  "pl_exp_setup_cont")
-            # Store frame size in bytes.
-            #
-            self.frame_bytes = frame_size.value
-            # Allocate storage for the frames. Use PVCAM's recommendation for the size.
-            #
-            size = self.getParameterDefault("param_frame_buffer_size")
-            self.data_buffer = numpy.ascontiguousarray(numpy.zeros(size, dtype = numpy.uint8))
-            self.buffer_len = int(size/self.frame_bytes)
-        else:
-            print("The camera is in slave mode. :(")
-            check(pvcam.pl_exp_setup_seq(self.hcam,
-                                         pvc.uns16(self.exp_len),
-                                          pvc.uns16(1),
-                                          ctypes.byref(region),
-                                          pvc.int16(pvc.TRIGGER_FIRST_MODE),#STROBED_MODE,BULB_MODE,TRIGGER_FIRST_MODE,VARIABLE_TIMED_MODE
-                                          pvc.uns32(exposure_time),
-                                          ctypes.byref(frame_size)),
-                  "pl_exp_setup_cont")
-            # Store frame size in bytes.
-            #
-            self.frame_bytes = int(frame_size.value/self.exp_len)
-            # Allocate storage for the frames. Use PVCAM's recommendation for the size.
-            #
-            size = self.getParameterDefault("param_frame_buffer_size")
-            self.data_buffer = numpy.ascontiguousarray(numpy.zeros(size, dtype = numpy.uint8))
-            self.buffer_len = int(size/self.frame_bytes)-1
-        
+        check(pvcam.pl_exp_setup_cont(self.hcam,
+                                      pvc.uns16(1),
+                                      ctypes.byref(region),
+                                      pvc.int16(pvc.TIMED_MODE),
+                                      pvc.uns32(exposure_time),
+                                      ctypes.byref(frame_size),
+                                      pvc.int16(pvc.CIRC_OVERWRITE)),
+              "pl_exp_setup_cont")
+
+        # Store frame size in bytes.
+        #
+        self.frame_bytes = frame_size.value
+
+        # Allocate storage for the frames. Use PVCAM's recommendation for the size.
+        #
+        size = self.getParameterDefault("param_frame_buffer_size")
+        self.data_buffer = numpy.ascontiguousarray(numpy.zeros(size, dtype = numpy.uint8))
+        self.buffer_len = int(size/self.frame_bytes)
 
     def getFrames(self):
         frames = []
@@ -202,7 +182,7 @@ class PVCAMCamera(object):
                   "pl_exp_unlock_oldest_frame")
 
             self.n_processed += 1
-            #print(self.camera_name,"processed frame",self.n_processed,self.n_captured.value)
+            
         return [frames, [self.frame_x, self.frame_y]]
         
     def getParam(self, pid, value, attrib):
@@ -397,7 +377,7 @@ class PVCAMCamera(object):
         # Set parameter for numbers.
         value = self.getTypeInstance(ptype)
         if value is not None:
-            value.value = pvalue            
+            value.value = pvalue     
             check(pvcam.pl_set_param(self.hcam,
                                      pid,
                                      ctypes.byref(value)),
@@ -432,18 +412,12 @@ class PVCAMCamera(object):
         #                              self.data_buffer.ctypes.data,
         #                              pvc.uns32(self.data_buffer.size)),
         #      "pl_exp_start_cont")
-        if self.triger_mode==0:
-            check(pvcam.pl_exp_start_cont(self.hcam,
-                                          #self.data_buffer.ctypes.data,
-                                          pvc.ulong64(self.data_buffer.ctypes.data),  # This seems to work. Not having ulong64 gave errors: ctypes.ArgumentError: argument 2: <class 'OverflowError'>: int too long to convert
-                                          pvc.uns32(self.data_buffer.size)),
-                  "pl_exp_start_cont")
-        else:
-            check(pvcam.pl_exp_start_seq(self.hcam,
+        check(pvcam.pl_exp_start_cont(self.hcam,
                                       #self.data_buffer.ctypes.data,
-                                      pvc.ulong64(self.data_buffer.ctypes.data)  # This seems to work. Not having ulong64 gave errors: ctypes.ArgumentError: argument 2: <class 'OverflowError'>: int too long to convert
-                                        ),
+                                      pvc.ulong64(self.data_buffer.ctypes.data),  # This seems to work. Not having ulong64 gave errors: ctypes.ArgumentError: argument 2: <class 'OverflowError'>: int too long to convert
+                                      pvc.uns32(self.data_buffer.size)),
               "pl_exp_start_cont")
+              
     def stopAcquisition(self):
         """
         Stop the current acquisition and tell the camera to go to the idle state.
